@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.org/dtd/hibernate-mapping-2.0.dtd">  
+  
+ <hibernate-mapping package="com.javatechnology.hibernate">  
+  <class name="Message" table="message">  
+    <id name="id" column="COLUMN_ID" type="long">  
+     <generator class="increment"></generator>  
+    </id>  
+            
+    <property name="text" column="Message_Text" type="string"></property>  
+  </class>  
+            
+ </hibernate-mapping>
+ 

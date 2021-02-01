@@ -9,11 +9,12 @@
    
    </bean>
    <bean id="personDao" class="com.javatechnology.jdbc.dao.PersonDaoImpl">
-   <property name="jdbcTemplate" ref="jdbcTemplate"></property>
-   </bean>
-   <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
    <property name="dataSource" ref="dataSource"></property>
    </bean>
+   
+  <!--  <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+   <property name="dataSource" ref="dataSource"></property>
+   </bean> -->
    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
    <property name="driverClassName" value="org.postgresql.Driver"></property>
    <property name="url" value="jdbc:postgresql://localhost:5432/Spring08"></property>

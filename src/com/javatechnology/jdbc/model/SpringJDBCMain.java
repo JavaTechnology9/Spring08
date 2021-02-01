@@ -11,10 +11,10 @@ public class SpringJDBCMain {
 		ApplicationContext context=new ClassPathXmlApplicationContext("SpringJDBCConfig.xml");
 		PersonService service=(PersonService)context.getBean("personService");
 		Person person=new Person();
-		person.setId((long)123);
-		person.setName("SPRING_JDBC");
-		person.setAddress("JDBC");
-		service.savePerson(person);
+		person.setId((long)325);
+		person.setName("SPRING_NAMED_PARAMETER");
+		person.setAddress("NAMED_PARAMETER");
+		System.out.println(service.savePerson(person));
 		
 
 	}

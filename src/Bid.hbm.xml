@@ -4,15 +4,15 @@
  "http://hibernate.org/dtd/hibernate-mapping-2.0.dtd">  
   
  <hibernate-mapping package="com.javatechnology.hibernate">  
-  <class name="Message" table="message">  
-    <id name="id" column="COLUMN_ID" type="long">  
+  <class name="Bid" table="BID">  
+    <id name="id" column="BID_ID" type="long">  
      <generator class="increment"></generator>  
     </id>  
             
-    <property name="text" column="Message_Text" type="string">
+    <property name="amount" column="BID_AMOUNT" type="double">
     
     </property>  
-    <many-to-one name="nextMessage" cascade="all" column="NEXT_MESSAGE_ID"></many-to-one>
+    <many-to-one name="item" cascade="all" column="ITEM_ID" class="Item" not-null="true"></many-to-one>
   </class>  
             
  </hibernate-mapping>

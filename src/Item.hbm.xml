@@ -20,6 +20,10 @@
     <one-to-many class="Bid"/>
     
     </set>
+    <set name="category" table="CATEGORY_ITEM" cascade="all" inverse="true">
+     <key column="ITEM_ID"></key>
+     <many-to-many class="Category" column="CATEGORY_ID"></many-to-many>
+    </set>
   </class>  
             
  </hibernate-mapping>

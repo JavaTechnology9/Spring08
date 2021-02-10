@@ -1,9 +1,21 @@
 package com.javatechnology.jdbc.model;
 
-public class Person {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="person", schema="hibernate")
+public class Person {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
+	@Column
 	private String name;
+	@Column
 	private String address;
 
 	public Long getId() {

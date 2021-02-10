@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.org/dtd/hibernate-mapping-2.0.dtd">  
+  
+ <hibernate-mapping package="com.javatechnology.jdbc.model">  
+  <class name="Person" table="Person">  
+    <id name="id" column="Person_ID" type="long">  
+     <generator class="increment"></generator>  
+    </id>  
+            
+    <property name="name" column="Person_Name" type="string">
+    
+    </property>  
+    <property name="address" column="Person_Address" type="string">
+    
+    </property> 
+  
+  </class>  
+            
+ </hibernate-mapping>
+ 

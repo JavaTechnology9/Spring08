@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.org/dtd/hibernate-mapping-2.0.dtd">  
+  
+ <hibernate-mapping package="com.javatechnology.hibernate">  
+  <class name="User" table="USER">  
+    <id name="id" column="USER_ID" type="long">  
+     <generator class="increment">
+    <!--  <param name="property">user</param> -->
+     </generator>  
+    </id>  
+            
+    <property name="firstname" column="FIRST_NAME" type="string"/>
+    <property name="lastName" column="LAST_NAME" type="string"/>
+   <!--  <property name="zipcode" column="ZIPCODE" type="string"/> -->
+    
+    <!-- <many-to-one name="parentCategory" class="Category" column="PARENT_CATEGORY_ID" cascade="none"></many-to-one>
+    
+  
+    <set name="childCategory" table="CATEGORY" cascade="save-update" inverse="true">
+    <key column="PARENT_CATEGORY_ID"></key>
+    <one-to-many class="Category"/>
+    
+    </set> -->
+    <one-to-one name="address" class="Address" cascade="all"></one-to-one>
+  </class>  
+          <query name="loaduserObjectByName">
+          from User u where u.lastName=?
+          </query>  
+ </hibernate-mapping>
+ 

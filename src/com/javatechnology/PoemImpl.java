@@ -1,5 +1,8 @@
 package com.javatechnology;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class PoemImpl implements Poem{
 
 	@Override

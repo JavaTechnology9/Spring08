@@ -1,13 +1,22 @@
 package com.javatechnology;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+@Component("performer")
 public class AutoWireExample implements Performer {
+	@Value("autowire")
 	private String name;
+	@Autowired
 	private Poem poem;
-
-	public AutoWireExample(String name, Poem poem) {
+	
+	/*public AutoWireExample(String name, Poem poem) {
 		super();
 		this.name = name;
 		this.poem = poem;
+	}*/
+	public AutoWireExample() {
+		// TODO Auto-generated constructor stub
 	}
 
 	/*
